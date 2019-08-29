@@ -1,0 +1,65 @@
+.image
+{
+	
+	height: 1000px;
+	width: 2000px;
+	background-image:url(3.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	overflow: hidden;
+}
+.road{
+	border-bottom: 15px dashed black;
+	left: 50%;
+	width: 3000px;
+	bottom: 400px;
+	position: absolute;
+	transform: translateX(-50%);
+	z-index: 1;
+
+	}
+
+.runner
+{
+
+	width:128px;
+	height: 222px;
+	display:block;
+	background-image:url(bob.png);
+	position: absolute;
+	bottom: 400px;
+	right: 0;
+	left: 0;
+	background-repeat: repeat-x;
+	z-index: 2;
+	
+animation: walk 1s steps(5) infinite,
+		forward 5s linear infinite;
+
+}
+
+@keyframes walk
+{
+	0%
+	{
+		background-position: 0px;
+
+	}
+	100%
+	{
+		background-position: 2000px;
+
+	}
+}
+@keyframes forward
+{
+	0%
+	{
+		transform: translateX(-300px);
+	}
+	100%
+	{
+		transform: translateX(1900px);
+	}
+}
